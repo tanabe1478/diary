@@ -12,17 +12,17 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: main
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           path: data
           ref: data
         continue-on-error: true
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16.x
+          node-version: '20.17.0'
           cache: npm
       - run: npm install
       - run: npm run export

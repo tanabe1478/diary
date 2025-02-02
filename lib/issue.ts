@@ -1,7 +1,7 @@
 import fs from "fs";
 import glob from "glob-promise";
 import matter from "gray-matter";
-import { remark } from "remark";
+import { unified } from 'unified';
 import remarkGfm from "remark-gfm";
 import remarkGithub from "remark-github";
 import remarkParse from "remark-parse";
@@ -78,15 +78,15 @@ function byCreatedAt(a: any, b: any) {
 }
 
 async function renderMarkdown(content: string) {
-  const result = await remark()
+  const processor = unified()
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkGithub, {
       repository: process.env.GITHUB_REPOSITORY || "github/dummy",
     })
     .use(remarkRehype)
-    .use(rehypeStringify)
-    .use(remarkGfm)
-    .process(content);
+    .use(rehypeStringify);
+
+  const result = await processor.process(content);
   return result.toString();
 }

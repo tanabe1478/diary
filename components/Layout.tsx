@@ -13,7 +13,10 @@ export default function Layout({ children }: { children: ReactNode }) {
       <header className="container mx-auto max-w-2xl px-8 py-12">
         <nav>
           <p>
-            <Link href="/" className="font-bold text-gray-900 visited:text-gray-900 dark:text-gray-300 dark:visited:text-gray-300">
+            <Link
+              href="/"
+              className="font-bold text-gray-900 visited:text-gray-900 dark:text-gray-300 dark:visited:text-gray-300"
+            >
               {siteTitle}
             </Link>
           </p>
@@ -26,7 +29,10 @@ export default function Layout({ children }: { children: ReactNode }) {
         <nav>
           <ul className="flex flex-row gap-6 justify-center">
             <li>
-              <Link href="/" className="text-gray-900 visited:text-gray-900 dark:text-gray-300 dark:visited:text-gray-300">
+              <Link
+                href="/"
+                className="text-gray-900 visited:text-gray-900 dark:text-gray-300 dark:visited:text-gray-300"
+              >
                 Home
               </Link>
             </li>

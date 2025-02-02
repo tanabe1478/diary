@@ -4,7 +4,7 @@ const nextConfig = {
     ? `/${process.env.GITHUB_REPOSITORY.split("/")[1]}`
     : "",
   reactStrictMode: true,
-  output: 'export',
+  output: "export",
   images: {
     unoptimized: true,
   },

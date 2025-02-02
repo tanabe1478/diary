@@ -44,7 +44,7 @@ jobs:
           publish_dir: data
       - uses: actions/setup-node@v4
         with:
-          node-version: '20.17.0'
+          node-version: "20.17.0"
           cache: npm
       - run: npm install
       - run: npm run export

@@ -29,9 +29,19 @@ const ShowArticle: NextPage<Props> = ({ issue, issueComments }) => {
         <aside className="block text-[.8rem] text-gray-500 dark:text-gray-400">
           <p>
             Posted by&nbsp;
-            <Link href={issue.user.html_url}>{issue.user.login}</Link>
+            <Link 
+              href={issue.user.html_url}
+              className="text-gray-900 hover:underline visited:text-gray-600 dark:text-gray-300 dark:visited:text-gray-500"
+            >
+              {issue.user.login}
+            </Link>
             &nbsp;at&nbsp;
-            <Link href={issue.html_url}>{`#${issue.number}`}</Link>.
+            <Link 
+              href={issue.html_url}
+              className="text-gray-900 hover:underline visited:text-gray-600 dark:text-gray-300 dark:visited:text-gray-500"
+            >
+              {`#${issue.number}`}
+            </Link>.
           </p>
         </aside>
         <div dangerouslySetInnerHTML={{ __html: issue.bodyHTML }}></div>

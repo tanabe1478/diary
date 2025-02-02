@@ -16,7 +16,12 @@ const Home: NextPage<Props> = ({ issues }) => {
         {issues.map((issue) => (
           <li key={issue.number}>
             <Time dateTime={issue.created_at} />
-            <Link href={`/articles/${issue.number}`}>{issue.title}</Link>
+            <Link 
+              href={`/articles/${issue.number}`}
+              className="text-gray-900 hover:underline visited:text-gray-600 dark:text-gray-300 dark:visited:text-gray-500"
+            >
+              {issue.title}
+            </Link>
           </li>
         ))}
       </ol>

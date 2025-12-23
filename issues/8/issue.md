@@ -1,0 +1,75 @@
+---
+url: 'https://api.github.com/repos/tanabe1478/diary/issues/8'
+repository_url: 'https://api.github.com/repos/tanabe1478/diary'
+labels_url: 'https://api.github.com/repos/tanabe1478/diary/issues/8/labels{/name}'
+comments_url: 'https://api.github.com/repos/tanabe1478/diary/issues/8/comments'
+events_url: 'https://api.github.com/repos/tanabe1478/diary/issues/8/events'
+html_url: 'https://github.com/tanabe1478/diary/issues/8'
+id: 1354576809
+node_id: I_kwDOHrcnts5QvTOp
+number: 8
+title: 副業を始めた
+user:
+  login: tanabe1478
+  id: 18596776
+  node_id: MDQ6VXNlcjE4NTk2Nzc2
+  avatar_url: 'https://avatars.githubusercontent.com/u/18596776?v=4'
+  gravatar_id: ''
+  url: 'https://api.github.com/users/tanabe1478'
+  html_url: 'https://github.com/tanabe1478'
+  followers_url: 'https://api.github.com/users/tanabe1478/followers'
+  following_url: 'https://api.github.com/users/tanabe1478/following{/other_user}'
+  gists_url: 'https://api.github.com/users/tanabe1478/gists{/gist_id}'
+  starred_url: 'https://api.github.com/users/tanabe1478/starred{/owner}{/repo}'
+  subscriptions_url: 'https://api.github.com/users/tanabe1478/subscriptions'
+  organizations_url: 'https://api.github.com/users/tanabe1478/orgs'
+  repos_url: 'https://api.github.com/users/tanabe1478/repos'
+  events_url: 'https://api.github.com/users/tanabe1478/events{/privacy}'
+  received_events_url: 'https://api.github.com/users/tanabe1478/received_events'
+  type: User
+  user_view_type: public
+  site_admin: false
+labels: []
+state: open
+locked: false
+assignee: null
+assignees: []
+milestone: null
+comments: 0
+created_at: '2022-08-29T16:38:44Z'
+updated_at: '2022-08-29T16:38:44Z'
+closed_at: null
+author_association: OWNER
+active_lock_reason: null
+sub_issues_summary:
+  total: 0
+  completed: 0
+  percent_completed: 0
+issue_dependencies_summary:
+  blocked_by: 0
+  total_blocked_by: 0
+  blocking: 0
+  total_blocking: 0
+closed_by: null
+reactions:
+  url: 'https://api.github.com/repos/tanabe1478/diary/issues/8/reactions'
+  total_count: 0
+  '+1': 0
+  '-1': 0
+  laugh: 0
+  hooray: 0
+  confused: 0
+  heart: 0
+  rocket: 0
+  eyes: 0
+timeline_url: 'https://api.github.com/repos/tanabe1478/diary/issues/8/timeline'
+performed_via_github_app: null
+state_reason: null
+---
+今まで本業が忙しかったということもあり、中々外に目を向けていられない状況だった。最近では少し落ち着いてきているので体調も良くなってきた。
+
+数年転職していないので、所属先の居心地が良くなってきたが、所属したままだと中々難しいチャレンジに取り組む機会を得た。外からの評価を確かめたい目的で様々な会社とお話させていただいた過程で話を頂いた。
+
+技術的に貢献できることとやりたいことのバランスが取れた内容で、かつ自分に要求されているものも納得感のあるものだったので、楽しくやっていきたい。
+
+まだ規模は小さいもののBtoBかつ自社開発のサービスのお手伝いは新鮮で、技術的にも、精神的にも本業に良い影響があると思っている。

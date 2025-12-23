@@ -11,7 +11,7 @@ user:
 
 # This is a test issue
 
-This is a basic markdown test with **bold** and *italic* text.
+This is a basic markdown test with **bold** and _italic_ text.
 
 ## Features to test
 

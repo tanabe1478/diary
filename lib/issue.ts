@@ -8,13 +8,39 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 
-export type Issue = any;
+export type Issue = {
+  number: number;
+  title: string;
+  created_at: string;
+  updated_at: string;
+  html_url: string;
+  user: {
+    login: string;
+    html_url: string;
+  };
+  body: string;
+  bodyHTML: string;
+};
 
-export type IssueComment = any;
+export type IssueComment = {
+  id: number;
+  created_at: string;
+  updated_at: string;
+  user: {
+    login: string;
+    html_url: string;
+  };
+  body: string;
+  bodyHTML: string;
+};
 
 const dataDirectoryPath = process.env.DATA_DIRECTORY_PATH || "./data";
 
-export async function getIssue({ issueNumber }: { issueNumber: number }) {
+export async function getIssue({
+  issueNumber,
+}: {
+  issueNumber: number;
+}): Promise<Issue> {
   const filePath = `${dataDirectoryPath}/issues/${issueNumber}/issue.md`;
   const content = fs.readFileSync(filePath, { encoding: "utf-8" });
   const issueMatter = matter(content);
@@ -24,10 +50,10 @@ export async function getIssue({ issueNumber }: { issueNumber: number }) {
     body,
     bodyHTML,
     ...issueMatter.data,
-  };
+  } as Issue;
 }
 
-export async function listIssues() {
+export async function listIssues(): Promise<Omit<Issue, "bodyHTML">[]> {
   const paths = await glob(`${dataDirectoryPath}/issues/*/issue.md`);
   return paths
     .map((filePath) => {
@@ -37,7 +63,7 @@ export async function listIssues() {
       return {
         body,
         ...issueMatter.data,
-      };
+      } as Omit<Issue, "bodyHTML">;
     })
     .sort(byCreatedAt)
     .reverse();
@@ -47,7 +73,7 @@ export async function listIssueComments({
   issueNumber,
 }: {
   issueNumber: number;
-}) {
+}): Promise<IssueComment[]> {
   const paths = await glob(
     `${dataDirectoryPath}/issues/${issueNumber}/issue_comments/*.md`,
   );
@@ -61,7 +87,7 @@ export async function listIssueComments({
         body,
         bodyHTML,
         ...issueMatter.data,
-      };
+      } as IssueComment;
     }),
   );
   return issueComments.sort(byCreatedAt);

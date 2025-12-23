@@ -9,6 +9,7 @@ export default defineConfig({
     globals: true,
     setupFiles: ["./vitest.setup.ts"],
     include: ["**/*.{test,spec}.{ts,tsx}"],
+    exclude: ["tests/e2e/**", "node_modules/**", "dist/**"],
     env: {
       DATA_DIRECTORY_PATH: path.resolve(__dirname, "__fixtures__"),
     },

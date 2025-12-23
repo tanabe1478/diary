@@ -49,7 +49,7 @@ export async function listIssueComments({
   issueNumber: number;
 }) {
   const paths = await glob(
-    `${dataDirectoryPath}/issues/${issueNumber}/issue_comments/*.md`
+    `${dataDirectoryPath}/issues/${issueNumber}/issue_comments/*.md`,
   );
   const issueComments = await Promise.all(
     paths.map(async (filePath: string) => {
@@ -62,7 +62,7 @@ export async function listIssueComments({
         bodyHTML,
         ...issueMatter.data,
       };
-    })
+    }),
   );
   return issueComments.sort(byCreatedAt);
 }

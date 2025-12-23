@@ -46,6 +46,7 @@
 **理由**: GitHub公式のNode.jsクライアントライブラリで、API変更への対応が安定している。
 
 **機能**:
+
 - REST API v3の完全サポート
 - 自動ページネーション
 - レート制限のハンドリング
@@ -60,8 +61,13 @@ gialogの出力形式を完全に再現：
 3. **ディレクトリ構造**: `data/issues/{number}/issue.md`および`data/issues/{number}/issue_comments/{id}.md`
 
 **実装例**:
+
 ```typescript
-function saveAsMarkdown(filePath: string, data: Issue | Comment, body: string): void {
+function saveAsMarkdown(
+  filePath: string,
+  data: Issue | Comment,
+  body: string,
+): void {
   const { body: _body, ...frontMatter } = data;
   const content = matter.stringify(body || "", frontMatter);
   fs.ensureDirSync(path.dirname(filePath));
@@ -88,6 +94,7 @@ function saveAsMarkdown(filePath: string, data: Issue | Comment, body: string): 
 ### Pull Requestの除外
 
 GitHub Issues APIはPull Requestも返すため、フィルタリングを実装：
+
 ```typescript
 const actualIssues = response.data.filter((issue) => !issue.pull_request);
 ```
@@ -115,6 +122,7 @@ Duration  6.79s
 ### CI/CD環境でのテスト
 
 GitHub Actions環境では以下の動作を確認予定：
+
 - [ ] Issue作成時に自動同期が動作
 - [ ] Issue更新時に自動同期が動作
 - [ ] Comment追加時に自動同期が動作

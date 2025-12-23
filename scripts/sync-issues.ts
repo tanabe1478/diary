@@ -28,7 +28,9 @@ if (!GITHUB_TOKEN) {
 
 const [owner, repo] = GITHUB_REPOSITORY.split("/");
 if (!owner || !repo) {
-  console.error(`Error: Invalid GITHUB_REPOSITORY format: ${GITHUB_REPOSITORY}`);
+  console.error(
+    `Error: Invalid GITHUB_REPOSITORY format: ${GITHUB_REPOSITORY}`,
+  );
   console.error("Expected format: owner/repo");
   process.exit(1);
 }
@@ -54,7 +56,11 @@ interface Comment {
 /**
  * Save issue or comment as markdown file with front matter
  */
-function saveAsMarkdown(filePath: string, data: Issue | Comment, body: string): void {
+function saveAsMarkdown(
+  filePath: string,
+  data: Issue | Comment,
+  body: string,
+): void {
   // Create a copy of data without the body field
   const { body: _body, ...frontMatter } = data;
 

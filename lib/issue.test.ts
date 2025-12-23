@@ -80,7 +80,7 @@ describe("listIssueComments", () => {
     const comments = await listIssueComments({ issueNumber: 1 });
 
     expect(comments[0].bodyHTML).toContain(
-      "<strong>additional information</strong>"
+      "<strong>additional information</strong>",
     );
   });
 

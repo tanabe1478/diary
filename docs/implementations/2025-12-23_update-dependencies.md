@@ -13,6 +13,7 @@
 ### 更新したライブラリ
 
 #### Markdown処理ライブラリ（unified系）
+
 - `remark`: 14.0.3 → **15.0.1** (メジャーアップデート)
 - `remark-gfm`: 3.0.1 → **4.0.1** (メジャーアップデート)
 - `remark-github`: 11.2.4 → **12.0.0** (メジャーアップデート)
@@ -22,6 +23,7 @@
 - `unified`: 10.1.2 → **11.0.5** (メジャーアップデート)
 
 #### ユーティリティライブラリ
+
 - `date-fns`: 2.30.0 → **4.1.0** (メジャーアップデート)
 - `glob`: 7.2.3 → **13.0.0** (メジャーアップデート)
 - `marked`: 12.0.2 → **17.0.1** (メジャーアップデート)
@@ -37,14 +39,17 @@
 - `package-lock.json` - ロックファイルの更新
 
 ### 削除したファイル/パッケージ
+
 - `glob-promise` パッケージを削除（glob v13がネイティブでPromiseをサポート）
 
 ## 🔧 技術的決定
 
 ### glob-promiseの削除
+
 **理由**: glob v13からネイティブでPromise APIをサポートするようになったため、ラッパーライブラリが不要になった。
 
 **変更内容**:
+
 ```typescript
 // Before
 import glob from "glob-promise";
@@ -56,16 +61,19 @@ const paths = await glob("pattern");
 ```
 
 ### tsconfig.jsonのmoduleResolution更新
+
 **理由**: 新しいライブラリ（特に@vitejs/plugin-react）が`bundler`モード対応の型定義を使用しているため。
 
 **効果**: TypeScriptの型解決がより柔軟になり、モダンなツール（Vite、esbuild等）との互換性が向上。
 
 ### unified系ライブラリの一括更新
+
 **理由**: unified v11でESM対応が強化され、関連するremark/rehypeプラグインも連動して更新される必要があった。
 
 **影響**: Markdown→HTML変換の出力は変わらず、既存のテストもすべてパス。
 
 ### date-fnsのメジャーアップデート
+
 **理由**: v4でTypeScriptサポートが強化され、パフォーマンスも向上。
 
 **影響**: `format`関数のAPIは後方互換性があり、コード変更不要。
@@ -73,6 +81,7 @@ const paths = await glob("pattern");
 ## 🧪 テスト
 
 ### テスト結果
+
 ```
 Test Files  2 passed (2)
 Tests  14 passed (14)
@@ -82,19 +91,24 @@ Duration  5.90s
 ✅ **すべてのテストがパス！**
 
 ### 手動テスト項目
+
 - [x] `npm test` - 14テストすべて合格
 - [x] `npm run lint` - エラーなし
 - [x] `npm run typecheck` - 型エラーなし（テストファイルのany型は既存の問題）
 
 ### カバレッジ
+
 既存のテストですべての変更箇所をカバー：
+
 - `lib/issue.ts`のglob使用箇所: `listIssues()`, `listIssueComments()`
 - Markdown処理: `renderMarkdown()`
 
 ## 🐛 既知の問題・制限事項
 
 ### テストファイルの型エラー
+
 `lib/issue.test.ts`で型エラーが発生していますが、これは既存の問題です：
+
 - `Issue`型と`IssueComment`型が`any`として定義されている
 - テストは正常に動作しており、実行時の問題はなし
 - **対応**: 別PRで適切な型定義を追加する
@@ -121,22 +135,26 @@ Duration  5.90s
 ## 💭 振り返り
 
 ### うまくいったこと
+
 - テストで保護された状態で安全にライブラリを更新できた
 - glob-promiseの削除によりdependency treeがシンプルになった
 - unified系の一括更新でも既存機能が正常に動作
 - すべてのテスト（14テスト）がパス
 
 ### 改善できること
+
 - React/Next.jsのメジャーアップデートは慎重に別PRで対応すべき
 - 型定義の改善を別タスクとして追加
 
 ### 学んだこと
+
 - glob v13からPromise APIがネイティブサポートされた
 - unified v11のESM対応により、関連パッケージも連動して更新が必要
 - tsconfig.jsonの`moduleResolution: "bundler"`がモダンなツールチェーンに必要
 - テストがあることで、大規模なライブラリ更新も安心して実施できる
 
 ### パッケージ数の変化
+
 - 追加: 6パッケージ
 - 削除: 33パッケージ（主にunified系の古い依存関係）
 - 変更: 62パッケージ
@@ -145,6 +163,7 @@ Duration  5.90s
 ---
 
 **関連ドキュメント**:
+
 - 実装計画: `.claude/plans/2025-12-23_update-dependencies.md`
 - テストインフラ実装: `docs/implementations/2025-12-23_add-testing-infrastructure.md`
 - 開発ルール: `CLAUDE.md`

@@ -45,7 +45,7 @@ ESLint 8から9へのメジャーアップデートを実施し、新しいFlat 
 
 1. ESLint 9.39.2へ更新
 2. eslint-config-next 16.1.1へ更新
-3. @typescript-eslint/* 8.50.1へ更新
+3. @typescript-eslint/\* 8.50.1へ更新
 
 ### フェーズ 2: Flat Config への移行
 
@@ -128,20 +128,15 @@ Next.js 16では`next lint`が削除されたため、`eslint`を直接使用：
 Next.js 16の公式推奨設定：
 
 ```javascript
-import { defineConfig, globalIgnores } from 'eslint/config'
-import nextVitals from 'eslint-config-next/core-web-vitals'
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
 
 const eslintConfig = defineConfig([
   ...nextVitals,
-  globalIgnores([
-    '.next/**',
-    'out/**',
-    'build/**',
-    'next-env.d.ts',
-  ]),
-])
+  globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
+]);
 
-export default eslintConfig
+export default eslintConfig;
 ```
 
 **Prettierの追加**:
@@ -163,7 +158,7 @@ const eslintConfig = defineConfig([
 ただし、明示的に設定する場合：
 
 ```javascript
-import nextTS from 'eslint-config-next/typescript'
+import nextTS from "eslint-config-next/typescript";
 ```
 
 ### .eslintignore の移行

@@ -144,6 +144,7 @@ React 18から19、Next.js 15から16へのメジャーアップデートを実�
 ESLint 9は**フラットコンフィグ**がデフォルトになる破壊的変更があります。
 
 **対策**:
+
 1. まずはESLint 8のままにして、React 19とNext.js 16の動作確認
 2. 別PRでESLint 9への移行を検討
 3. または、ESLintの更新を延期
@@ -153,6 +154,7 @@ ESLint 9は**フラットコンフィグ**がデフォルトになる破壊的�
 Prettier 3も破壊的変更があるため、慎重に移行する必要があります。
 
 **対策**:
+
 1. まずはPrettier 2のままにして、React 19とNext.js 16の動作確認
 2. 別PRでPrettier 3への移行を検討
 
@@ -161,6 +163,7 @@ Prettier 3も破壊的変更があるため、慎重に移行する必要があ�
 Tailwind CSS 4は**major rewrite**で、多くの破壊的変更があります。
 
 **対策**:
+
 1. まずはTailwind CSS 3のままにして、React 19とNext.js 16の動作確認
 2. **別PR**でTailwind CSS 4への移行を検討（推奨）
 

@@ -29,27 +29,27 @@ ESLint 8から9へのメジャーアップデートを実施し、新しいFlat 
 - **eslint.config.mjs** - 新しいFlat Config形式の設定ファイル
 
 ```javascript
-import { defineConfig } from 'eslint/config'
-import nextConfig from 'eslint-config-next/core-web-vitals'
-import prettierConfig from 'eslint-config-prettier'
+import { defineConfig } from "eslint/config";
+import nextConfig from "eslint-config-next/core-web-vitals";
+import prettierConfig from "eslint-config-prettier";
 
 const eslintConfig = defineConfig([
   ...nextConfig,
   prettierConfig,
   {
     ignores: [
-      '.next/**',
-      'out/**',
-      'build/**',
-      'next-env.d.ts',
-      'node_modules/**',
-      '.git/**',
-      'coverage/**',
+      ".next/**",
+      "out/**",
+      "build/**",
+      "next-env.d.ts",
+      "node_modules/**",
+      ".git/**",
+      "coverage/**",
     ],
   },
-])
+]);
 
-export default eslintConfig
+export default eslintConfig;
 ```
 
 ### 削除したファイル
@@ -64,7 +64,7 @@ export default eslintConfig
 
 ```json
 {
-  "lint:next": "eslint ."  // "next lint" から変更
+  "lint:next": "eslint ." // "next lint" から変更
 }
 ```
 
@@ -145,6 +145,7 @@ Flat Configでは`.eslintignore`が非推奨なため、`ignores`プロパティ
 #### 問題 1: @testing-library/dom が見つからない
 
 **エラー**:
+
 ```
 Error: Cannot find module '@testing-library/dom'
 ```
@@ -152,6 +153,7 @@ Error: Cannot find module '@testing-library/dom'
 **原因**: `--legacy-peer-deps`使用時に依存関係が正しくインストールされなかった
 
 **解決**: 明示的にインストール
+
 ```bash
 npm install @testing-library/dom
 ```
@@ -181,6 +183,7 @@ $ npm run lint:next
 - **結果**: 9パッケージ削減
 
 脆弱性も改善：
+
 - **以前**: 6 vulnerabilities (1 low, 2 moderate, 3 high)
 - **現在**: 4 vulnerabilities (1 low, 2 moderate, 1 high)
 

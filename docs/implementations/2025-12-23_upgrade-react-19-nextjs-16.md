@@ -53,7 +53,7 @@ React 18から19、Next.js 15から16へのメジャーアップデートを実�
 
 - **ESLint**: 8.57.1 → 9.39.2（フラットコンフィグへの移行が必要）
 - **eslint-config-next**: 14.1.0 → 16.1.1（ESLint 9が必要）
-- **@typescript-eslint/***: 5.62.0 → 8.50.1（ESLint 9が必要）
+- **@typescript-eslint/\***: 5.62.0 → 8.50.1（ESLint 9が必要）
 - **Prettier**: 2.8.8 → 3.7.4（フォーマットルールの変更）
 - **Tailwind CSS**: 3.4.17 → 4.1.18（Major rewrite）
 
@@ -64,6 +64,7 @@ React 18から19、Next.js 15から16へのメジャーアップデートを実�
 **理由**: このプロジェクトはPages Routerを使用しているため、Next.js 16の主要な破壊的変更（Async Request APIs、middlewareのproxy化等）の影響を受けない。
 
 **メリット**:
+
 - 安定性が高い
 - 破壊的変更が少ない
 - getStaticProps/getStaticPaths が引き続き動作
@@ -73,6 +74,7 @@ React 18から19、Next.js 15から16へのメジャーアップデートを実�
 Next.js 16でTurbopackがデフォルトバンドラーになりました。
 
 **影響**:
+
 - ビルド時間が短縮（3.7秒で完了）
 - webpack設定がないため、移行は透過的
 - 問題がある場合は`--webpack`フラグで従来のwebpackに戻せる
@@ -80,6 +82,7 @@ Next.js 16でTurbopackがデフォルトバンドラーになりました。
 ### React 19の新機能
 
 このプロジェクトでは以下の新機能は当面使用しない：
+
 - **ref as prop**: forwardRefを使用していないため影響なし
 - **Actions**: フォーム処理の改善（将来的に活用可能）
 - **use() hook**: Promiseやコンテキストの処理（将来的に活用可能）
@@ -89,9 +92,10 @@ Next.js 16でTurbopackがデフォルトバンドラーになりました。
 Next.js 16が`jsx: react-jsx`を自動設定しました。
 
 **変更内容**:
+
 ```json
 {
-  "jsx": "react-jsx"  // React 19の自動ランタイム
+  "jsx": "react-jsx" // React 19の自動ランタイム
 }
 ```
 
@@ -136,6 +140,7 @@ lib/issue.test.ts: 13 errors
 これらは**既存の問題**（`any`型の使用）で、今回の更新とは無関係です。
 
 **理由**:
+
 - テストファイルで`Issue`型を`any`として定義
 - 実際のプロパティアクセス時に型エラー
 - テスト自体は正常に動作
@@ -179,7 +184,7 @@ lib/issue.test.ts: 13 errors
 - [ ] **ESLint 9への移行**（別PR）
   - フラットコンフィグへの移行
   - eslint-config-next@16.1.1への更新
-  - @typescript-eslint/*の更新
+  - @typescript-eslint/\*の更新
 
 - [ ] **Tailwind CSS 4への移行**（別PR）
   - Major rewriteのため影響範囲が大きい

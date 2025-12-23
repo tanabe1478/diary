@@ -31,7 +31,13 @@ jobs:
           path: data
           ref: data
         continue-on-error: true
-      - uses: r7kamura/gialog-sync@v1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20.17.0"
+          cache: npm
+      - run: npm install
+      - name: Sync GitHub Issues to Markdown
+        run: npm run sync-issues
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: peaceiris/actions-gh-pages@v3
@@ -42,11 +48,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: data
           publish_dir: data
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20.17.0"
-          cache: npm
-      - run: npm install
       - run: npm run export
       - uses: peaceiris/actions-gh-pages@v3
         with:

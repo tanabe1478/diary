@@ -32,7 +32,9 @@ jobs:
       - name: Checkout data branch
         run: |
           git fetch origin data
-          git checkout data -- data/
+          git checkout origin/data -- issues
+          mkdir -p data
+          mv issues data/
 
       - name: Build project
         run: npm run build

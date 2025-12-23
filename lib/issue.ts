@@ -1,5 +1,5 @@
 import fs from "fs";
-import glob from "glob-promise";
+import { glob } from "glob";
 import matter from "gray-matter";
 import { unified } from "unified";
 import remarkGfm from "remark-gfm";
@@ -28,7 +28,7 @@ export async function getIssue({ issueNumber }: { issueNumber: number }) {
 }
 
 export async function listIssues() {
-  const paths = await glob.promise(`${dataDirectoryPath}/issues/*/issue.md`);
+  const paths = await glob(`${dataDirectoryPath}/issues/*/issue.md`);
   return paths
     .map((filePath) => {
       const content = fs.readFileSync(filePath, { encoding: "utf-8" });
@@ -48,7 +48,7 @@ export async function listIssueComments({
 }: {
   issueNumber: number;
 }) {
-  const paths = await glob.promise(
+  const paths = await glob(
     `${dataDirectoryPath}/issues/${issueNumber}/issue_comments/*.md`
   );
   const issueComments = await Promise.all(

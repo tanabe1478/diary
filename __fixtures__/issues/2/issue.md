@@ -20,10 +20,10 @@ This issue tests GFM features.
 
 ## Table
 
-| Feature | Status |
-|---------|--------|
-| Tables | ✅ |
-| Task lists | ✅ |
+| Feature    | Status |
+| ---------- | ------ |
+| Tables     | ✅     |
+| Task lists | ✅     |
 
 ## Strikethrough
 

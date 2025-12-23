@@ -29,6 +29,11 @@ jobs:
       - name: Run unit tests
         run: npm run test:run
 
+      - name: Checkout data branch
+        run: |
+          git fetch origin data
+          git checkout data -- data/
+
       - name: Build project
         run: npm run build
 

@@ -15,7 +15,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           <p>
             <Link
               href="/"
-              className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+              className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
             >
               {siteTitle}
             </Link>

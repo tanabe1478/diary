@@ -17,41 +17,55 @@ type Props = {
 
 const ShowArticle: NextPage<Props> = ({ issue, issueComments }) => {
   return (
-    <div className="divide-y divide-gray-300 dark:divide-gray-700">
+    <div className="space-y-8">
       <Head>
         <title>{issue.title}</title>
       </Head>
-      <article className="markdown">
-        <header>
-          <Time dateTime={issue.created_at} />
-          <h1>{issue.title}</h1>
-        </header>
-        <aside className="block text-[.8rem] text-gray-500 dark:text-gray-400">
-          <p>
-            Posted by&nbsp;
+      <article className="bg-white/70 dark:bg-gray-900/70 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/20 dark:border-gray-700/30 shadow-xl">
+        <header className="mb-8">
+          <div className="flex items-center gap-3 mb-4">
+            <Time dateTime={issue.created_at} />
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 border border-purple-200 dark:border-purple-800/30">
+              #{issue.number}
+            </span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent mb-6">
+            {issue.title}
+          </h1>
+          <aside className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 bg-gray-50/50 dark:bg-gray-800/50 rounded-lg px-4 py-3 backdrop-blur-sm">
+            <span>Posted by</span>
             <Link
               href={issue.user.html_url}
-              className="text-gray-900 hover:underline visited:text-gray-600 dark:text-gray-300 dark:visited:text-gray-500"
+              className="text-purple-600 dark:text-purple-400 hover:underline font-medium"
             >
               {issue.user.login}
             </Link>
-            &nbsp;at&nbsp;
+            <span>·</span>
             <Link
               href={issue.html_url}
-              className="text-gray-900 hover:underline visited:text-gray-600 dark:text-gray-300 dark:visited:text-gray-500"
+              className="text-purple-600 dark:text-purple-400 hover:underline"
             >
-              {`#${issue.number}`}
+              View on GitHub
             </Link>
-            .
-          </p>
-        </aside>
-        <div dangerouslySetInnerHTML={{ __html: issue.bodyHTML }}></div>
+          </aside>
+        </header>
+        <div className="markdown prose prose-lg dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: issue.bodyHTML }}></div>
       </article>
-      {issueComments.map((issueComment) => (
-        <article key={issueComment.id} className="markdown">
-          <div dangerouslySetInnerHTML={{ __html: issueComment.bodyHTML }} />
-        </article>
-      ))}
+      {issueComments.length > 0 && (
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 px-2">
+            Comments ({issueComments.length})
+          </h2>
+          {issueComments.map((issueComment) => (
+            <article
+              key={issueComment.id}
+              className="bg-white/60 dark:bg-gray-900/60 backdrop-blur-md rounded-xl p-6 md:p-8 border border-white/20 dark:border-gray-700/30 shadow-lg"
+            >
+              <div className="markdown prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: issueComment.bodyHTML }} />
+            </article>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

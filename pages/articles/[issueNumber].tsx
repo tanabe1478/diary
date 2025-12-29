@@ -29,7 +29,7 @@ const ShowArticle: NextPage<Props> = ({ issue, issueComments }) => {
               #{issue.number}
             </span>
           </div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent mb-4 md:mb-6">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent mb-4 md:mb-6">
             {issue.title}
           </h1>
           <aside className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 bg-gray-50/50 dark:bg-gray-800/50 rounded-lg px-3 sm:px-4 py-2 sm:py-3 backdrop-blur-sm">
@@ -49,11 +49,11 @@ const ShowArticle: NextPage<Props> = ({ issue, issueComments }) => {
             </Link>
           </aside>
         </header>
-        <div className="markdown prose sm:prose-lg dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: issue.bodyHTML }}></div>
+        <div className="markdown prose prose-sm sm:prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: issue.bodyHTML }}></div>
       </article>
       {issueComments.length > 0 && (
         <div className="space-y-4 md:space-y-6">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 px-1 md:px-2">
+          <h2 className="text-lg md:text-xl font-bold text-gray-900 dark:text-gray-100 px-1 md:px-2">
             Comments ({issueComments.length})
           </h2>
           {issueComments.map((issueComment) => (
@@ -61,7 +61,7 @@ const ShowArticle: NextPage<Props> = ({ issue, issueComments }) => {
               key={issueComment.id}
               className="bg-white/60 dark:bg-gray-900/60 backdrop-blur-md rounded-xl p-4 sm:p-6 md:p-8 border border-white/20 dark:border-gray-700/30 shadow-lg"
             >
-              <div className="markdown prose sm:prose-lg dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: issueComment.bodyHTML }} />
+              <div className="markdown prose prose-sm sm:prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: issueComment.bodyHTML }} />
             </article>
           ))}
         </div>

@@ -13,10 +13,10 @@ const Home: NextPage<Props> = ({ issues }) => {
   return (
     <section>
       <div className="mb-8 md:mb-12">
-        <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent mb-3 md:mb-4">
+        <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent mb-3 md:mb-4">
           Latest Articles
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg">
+        <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
           Thoughts, stories and ideas
         </p>
       </div>
@@ -37,10 +37,10 @@ const Home: NextPage<Props> = ({ issues }) => {
                     #{issue.number}
                   </span>
                 </div>
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 group-hover:bg-gradient-to-r group-hover:from-blue-700 group-hover:to-blue-500 dark:group-hover:from-blue-400 dark:group-hover:to-cyan-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                <h2 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-gray-100 group-hover:bg-gradient-to-r group-hover:from-blue-700 group-hover:to-blue-500 dark:group-hover:from-blue-400 dark:group-hover:to-cyan-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                   {issue.title}
                 </h2>
-                <div className="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 font-medium mt-1">
+                <div className="flex items-center gap-2 text-xs sm:text-sm text-blue-600 dark:text-blue-400 font-medium mt-1">
                   <span>Read more</span>
                   <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

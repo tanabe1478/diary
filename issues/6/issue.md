@@ -1,0 +1,83 @@
+---
+url: 'https://api.github.com/repos/tanabe1478/diary/issues/6'
+repository_url: 'https://api.github.com/repos/tanabe1478/diary'
+labels_url: 'https://api.github.com/repos/tanabe1478/diary/issues/6/labels{/name}'
+comments_url: 'https://api.github.com/repos/tanabe1478/diary/issues/6/comments'
+events_url: 'https://api.github.com/repos/tanabe1478/diary/issues/6/events'
+html_url: 'https://github.com/tanabe1478/diary/issues/6'
+id: 1322765379
+node_id: I_kwDOHrcnts5O18xD
+number: 6
+title: 最近やっている本の読み方
+user:
+  login: tanabe1478
+  id: 18596776
+  node_id: MDQ6VXNlcjE4NTk2Nzc2
+  avatar_url: 'https://avatars.githubusercontent.com/u/18596776?v=4'
+  gravatar_id: ''
+  url: 'https://api.github.com/users/tanabe1478'
+  html_url: 'https://github.com/tanabe1478'
+  followers_url: 'https://api.github.com/users/tanabe1478/followers'
+  following_url: 'https://api.github.com/users/tanabe1478/following{/other_user}'
+  gists_url: 'https://api.github.com/users/tanabe1478/gists{/gist_id}'
+  starred_url: 'https://api.github.com/users/tanabe1478/starred{/owner}{/repo}'
+  subscriptions_url: 'https://api.github.com/users/tanabe1478/subscriptions'
+  organizations_url: 'https://api.github.com/users/tanabe1478/orgs'
+  repos_url: 'https://api.github.com/users/tanabe1478/repos'
+  events_url: 'https://api.github.com/users/tanabe1478/events{/privacy}'
+  received_events_url: 'https://api.github.com/users/tanabe1478/received_events'
+  type: User
+  user_view_type: public
+  site_admin: false
+labels: []
+state: open
+locked: false
+assignee: null
+assignees: []
+milestone: null
+comments: 0
+created_at: '2022-07-29T23:04:54Z'
+updated_at: '2022-08-02T05:19:49Z'
+closed_at: null
+author_association: OWNER
+active_lock_reason: null
+sub_issues_summary:
+  total: 0
+  completed: 0
+  percent_completed: 0
+issue_dependencies_summary:
+  blocked_by: 0
+  total_blocked_by: 0
+  blocking: 0
+  total_blocking: 0
+closed_by: null
+reactions:
+  url: 'https://api.github.com/repos/tanabe1478/diary/issues/6/reactions'
+  total_count: 0
+  '+1': 0
+  '-1': 0
+  laugh: 0
+  hooray: 0
+  confused: 0
+  heart: 0
+  rocket: 0
+  eyes: 0
+timeline_url: 'https://api.github.com/repos/tanabe1478/diary/issues/6/timeline'
+performed_via_github_app: null
+state_reason: null
+---
+本を読む時、必ず読書メモを取るようにしている。後から再度取り出しやすいようにキーワードを残したり、読んだ時に感じたことを書いている。本を読めばわかることまでメモしていた時期もあったのだが時間がかかりすぎる割にメリットも感じないことから学生時代に辞めた記憶がある。
+
+読書メモをするのに便利なのが入力効率の良いキーボードだから、常に読書時はPCデスクで読みながらメモしていた。
+
+もっとインプットのハードルを下げないと体調悪い時や気が乗らない時に本をよむきっかけが作れないと思って簡易な手段を2つ作って今のところうまく回っている。
+
+1つ目がiPadをsplit viewで分割して片方にScrapboxを表示して音声入力とタッチでメモしていくやり方。
+![529689b23f61fe03e7b48055941d8bac](https://user-images.githubusercontent.com/18596776/181857707-fbd1968f-c730-420c-8558-bfd3309badbf.png)
+
+最初はキーボードをいちいち表示していたのだが、PCと比べたときの入力のストレスに耐えられず断念。
+
+
+2つ目がKindle paperwhiteで読みながらスマホでScrapboxを開いて音声入力とタッチでメモしていくやり方。この場合はこっちのやり方でみたいな決め事はなくてその時手に持っているデバイスで始めるようにしていたら自然にこの形になった。
+
+音声入力の品質が良いのでストレスも感じない。横になりながら読書メモが取れるなんて良い時代になったと思う。残念なのはScrapboxのリンク化とか文字の微修正で結局iPadやスマホのキーボードを表示しないといけないことと、定期的に手元のデバイスに話しかける異常者に見えることぐらい

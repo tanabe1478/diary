@@ -1,0 +1,81 @@
+---
+url: 'https://api.github.com/repos/tanabe1478/diary/issues/2'
+repository_url: 'https://api.github.com/repos/tanabe1478/diary'
+labels_url: 'https://api.github.com/repos/tanabe1478/diary/issues/2/labels{/name}'
+comments_url: 'https://api.github.com/repos/tanabe1478/diary/issues/2/comments'
+events_url: 'https://api.github.com/repos/tanabe1478/diary/issues/2/events'
+html_url: 'https://github.com/tanabe1478/diary/issues/2'
+id: 1308844547
+node_id: I_kwDOHrcnts5OA2ID
+number: 2
+title: iOSからAndroidへ移行した
+user:
+  login: tanabe1478
+  id: 18596776
+  node_id: MDQ6VXNlcjE4NTk2Nzc2
+  avatar_url: 'https://avatars.githubusercontent.com/u/18596776?v=4'
+  gravatar_id: ''
+  url: 'https://api.github.com/users/tanabe1478'
+  html_url: 'https://github.com/tanabe1478'
+  followers_url: 'https://api.github.com/users/tanabe1478/followers'
+  following_url: 'https://api.github.com/users/tanabe1478/following{/other_user}'
+  gists_url: 'https://api.github.com/users/tanabe1478/gists{/gist_id}'
+  starred_url: 'https://api.github.com/users/tanabe1478/starred{/owner}{/repo}'
+  subscriptions_url: 'https://api.github.com/users/tanabe1478/subscriptions'
+  organizations_url: 'https://api.github.com/users/tanabe1478/orgs'
+  repos_url: 'https://api.github.com/users/tanabe1478/repos'
+  events_url: 'https://api.github.com/users/tanabe1478/events{/privacy}'
+  received_events_url: 'https://api.github.com/users/tanabe1478/received_events'
+  type: User
+  user_view_type: public
+  site_admin: false
+labels: []
+state: open
+locked: false
+assignee: null
+assignees: []
+milestone: null
+comments: 0
+created_at: '2022-07-19T00:56:41Z'
+updated_at: '2022-07-20T02:08:04Z'
+closed_at: null
+author_association: OWNER
+active_lock_reason: null
+sub_issues_summary:
+  total: 0
+  completed: 0
+  percent_completed: 0
+issue_dependencies_summary:
+  blocked_by: 0
+  total_blocked_by: 0
+  blocking: 0
+  total_blocking: 0
+closed_by: null
+reactions:
+  url: 'https://api.github.com/repos/tanabe1478/diary/issues/2/reactions'
+  total_count: 0
+  '+1': 0
+  '-1': 0
+  laugh: 0
+  hooray: 0
+  confused: 0
+  heart: 0
+  rocket: 0
+  eyes: 0
+timeline_url: 'https://api.github.com/repos/tanabe1478/diary/issues/2/timeline'
+performed_via_github_app: null
+state_reason: null
+---
+ずっとiOSを使っていて、業務でもiOSアプリを作っていることもあってなんの疑問もなくiOSを使っていた。AndroidはNexus7というタブレットぐらいしか買った覚えがない。勤務先の検証端末でAndroidを触り興味を持ち、FlutterでAndroidの動作確認をしている内にAndroidの操作感が気に入ってしまった。
+
+しばらく2台持ちで過ごしてみたが特に支障がなかったので思い切って移行することにした。普段使っているアプリに片方のOSにしかないようなものがなく移行も容易だった。使いこなせていなかったとも言えるかもしれない。
+
+iPhoneからの移行に伴いAirPods Proを友人にあげたのでワイヤレスイヤホンが欲しかったのだが、Primeセールで割引になっていたEcho Budsが目に付いて試しに買ってみた。
+
+![Echo Buds](https://user-images.githubusercontent.com/18596776/179640312-07423f6b-f7be-4903-9669-6bf914c8af92.jpg)
+
+AirPods Proと比べるとノイキャン、音質ともにやや劣るなという感じ。とはいえ、ウォーキング中と集中したいとき用に買ったこともあり今のところ不満はない。
+
+元々イヤホンやヘッドホンは色々所持していて音楽鑑賞用だと有線のものを使うので、AirPods Proが座っていた席を埋めるには十分だった。アプリで初期設定をすれば後はAirPods Proのようにシームレスな体験ができる。
+
+この調子でMacからも移行したいところなのだがXcodeは他OSでは動かない。完全にロックインされていて悲しい限りだ。そういうわけでバックエンドに数年ぶりに興味が向いている。

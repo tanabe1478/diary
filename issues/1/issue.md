@@ -1,0 +1,75 @@
+---
+url: 'https://api.github.com/repos/tanabe1478/diary/issues/1'
+repository_url: 'https://api.github.com/repos/tanabe1478/diary'
+labels_url: 'https://api.github.com/repos/tanabe1478/diary/issues/1/labels{/name}'
+comments_url: 'https://api.github.com/repos/tanabe1478/diary/issues/1/comments'
+events_url: 'https://api.github.com/repos/tanabe1478/diary/issues/1/events'
+html_url: 'https://github.com/tanabe1478/diary/issues/1'
+id: 1308479923
+node_id: I_kwDOHrcnts5N_dGz
+number: 1
+title: Next.jsの勉強
+user:
+  login: tanabe1478
+  id: 18596776
+  node_id: MDQ6VXNlcjE4NTk2Nzc2
+  avatar_url: 'https://avatars.githubusercontent.com/u/18596776?v=4'
+  gravatar_id: ''
+  url: 'https://api.github.com/users/tanabe1478'
+  html_url: 'https://github.com/tanabe1478'
+  followers_url: 'https://api.github.com/users/tanabe1478/followers'
+  following_url: 'https://api.github.com/users/tanabe1478/following{/other_user}'
+  gists_url: 'https://api.github.com/users/tanabe1478/gists{/gist_id}'
+  starred_url: 'https://api.github.com/users/tanabe1478/starred{/owner}{/repo}'
+  subscriptions_url: 'https://api.github.com/users/tanabe1478/subscriptions'
+  organizations_url: 'https://api.github.com/users/tanabe1478/orgs'
+  repos_url: 'https://api.github.com/users/tanabe1478/repos'
+  events_url: 'https://api.github.com/users/tanabe1478/events{/privacy}'
+  received_events_url: 'https://api.github.com/users/tanabe1478/received_events'
+  type: User
+  user_view_type: public
+  site_admin: false
+labels: []
+state: open
+locked: false
+assignee: null
+assignees: []
+milestone: null
+comments: 0
+created_at: '2022-07-18T19:51:29Z'
+updated_at: '2022-07-18T19:51:29Z'
+closed_at: null
+author_association: OWNER
+active_lock_reason: null
+sub_issues_summary:
+  total: 0
+  completed: 0
+  percent_completed: 0
+issue_dependencies_summary:
+  blocked_by: 0
+  total_blocked_by: 0
+  blocking: 0
+  total_blocking: 0
+closed_by: null
+reactions:
+  url: 'https://api.github.com/repos/tanabe1478/diary/issues/1/reactions'
+  total_count: 0
+  '+1': 0
+  '-1': 0
+  laugh: 0
+  hooray: 0
+  confused: 0
+  heart: 0
+  rocket: 0
+  eyes: 0
+timeline_url: 'https://api.github.com/repos/tanabe1478/diary/issues/1/timeline'
+performed_via_github_app: null
+state_reason: null
+---
+## この日記の動機
+
+https://tanabe1478.github.io/ はSwift製だが、Next.jsの学習がしたいと最近考えていた。基本的な学習は終わったが具体的なプロジェクトで触りながら覚えていきたいところがあって、GitHub Issuesからブログを生成してくれる以下のリポジトリを利用させてもらった。
+
+https://github.com/r7kamura/gialog
+
+少しずつ手を加えながらNext.jsに慣れていきたい.

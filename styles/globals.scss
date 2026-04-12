@@ -1,35 +1,29 @@
 @import "tailwindcss";
 
-@media (min-width: 1000px) {
-  html {
-    font-size: 1.6vw;
-  }
-}
-
-@media (min-width: 1200px) {
-  html {
-    font-size: 19.2px;
-  }
-}
-
 html {
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
-  line-height: 1.8;
+  line-height: 1.7;
   word-wrap: break-word;
 }
 
 a {
-  color: rgb(0, 0, 238);
+  color: #2563eb;
+  text-decoration: none;
 
-  @apply underline;
-  @apply dark:text-blue-400;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
-  &:visited {
-    color: rgb(85, 26, 139);
+.link-plain {
+  color: inherit;
 
-    @apply dark:text-violet-300;
+  &:hover {
+    color: inherit;
+    text-decoration: none;
   }
 }

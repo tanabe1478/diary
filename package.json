@@ -1,8 +1,14 @@
 {
   "name": "github-issues-as-blog",
   "version": "0.1.0",
+  "description": "GitHub Issues powered diary site and desktop writer.",
+  "author": "tanabe1478",
   "private": true,
+  "main": "dist-electron/main.js",
   "scripts": {
+    "app:build": "tsc -p tsconfig.electron.json",
+    "app:dev": "npm run app:build && electron .",
+    "app:dist": "npm run app:build && electron-builder",
     "build": "next build",
     "dev": "next dev",
     "export": "next build",
@@ -54,6 +60,8 @@
     "@vitejs/plugin-react": "^5.1.2",
     "@vitest/ui": "^4.0.16",
     "autoprefixer": "^10.4.23",
+    "electron": "^41.3.0",
+    "electron-builder": "^26.8.1",
     "eslint": "^9.39.2",
     "eslint-config-next": "^16.1.1",
     "eslint-config-prettier": "^10.1.8",
@@ -69,5 +77,30 @@
   },
   "engines": {
     "node": ">=22.21.1"
+  },
+  "build": {
+    "appId": "com.tanabe1478.diary.writer",
+    "productName": "Diary Writer",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist-electron/**/*",
+      "desktop/renderer/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "signAndEditExecutable": false,
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    }
   }
 }
